@@ -1,4 +1,4 @@
-fetch("http://localhost:8000/renderer/basic.pms")
+fetch("https://theshovel.rocks/MotionSprite/renderer/basic.pms")
   .then((r) => r.arrayBuffer())
   .then((buffer) => vm.addSprite(buffer))
   .then(() => {
