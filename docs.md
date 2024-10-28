@@ -77,7 +77,7 @@ maximum value, while 100 is the value beling clamped. You get the idea. It's jus
 
 ## -Renderer-
 ### Implementation
-You can load all the extensions required and a sprite with the renderer using this extension: URL<br>
+You can load everything required using this extension: ``https://theshovel.rocks/MotionSprite/loader/loader.js``<br>
 Keep in mind that this was made for Pen projects. Your project must already be a Pen based project for this to work!<br>
 You can drag the custom block into any other sprite you are using. (you will probably want to move it into the sprite
 that renders everything in your game)<br>
@@ -130,4 +130,3 @@ for all of them. This will not load them as different animations and save a lot 
 You can use this to make stuff like drop shadows as shown bellow:<br>
 ![Screenshot_20241028_180438](https://github.com/user-attachments/assets/703eeb59-17bc-4280-b32b-fb0e5281e866)
 ![Screenshot_20241028_180501](https://github.com/user-attachments/assets/d08df41a-aa9f-4138-9f09-26803571f053)
-
