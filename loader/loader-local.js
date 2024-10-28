@@ -1,5 +1,5 @@
 if (typeof vm.runtime.ext_globalCoordinate != "object") {
-  fetch("https://theshovel.rocks/MotionSprite/renderer/basic.pms")
+  fetch("http://localhost:8000/renderer/basic.pms")
     .then((r) => r.arrayBuffer())
     .then((buffer) => {
       vm.addSprite(buffer);
