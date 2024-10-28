@@ -78,6 +78,8 @@ maximum value, while 100 is the value beling clamped. You get the idea. It's jus
 ## -Renderer-
 ### Implementation
 You can load everything required using this extension: ``https://theshovel.rocks/MotionSprite/loader/loader.js``<br>
+LOAD IT UNSANDBOXED. Check the box when loading the URL!!!<br>
+
 Keep in mind that this was made for Pen projects. Your project must already be a Pen based project for this to work!<br>
 You can drag the custom block into any other sprite you are using. (you will probably want to move it into the sprite
 that renders everything in your game)<br>
