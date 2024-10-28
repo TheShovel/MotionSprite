@@ -21,7 +21,7 @@ writinng a pen based renderer.
 
 ## -Editor-
 ### Basics
-The editor is made out of a viewport and 4 pannels.<br>
+The editor is made out of a viewport, 4 pannels and a bar.<br>
 
 On the top left you have the part list. There you can add, remove, re-order and assign textures to parts of your
 animation. On the bottom left you have the property inspector. Once you click a
@@ -31,7 +31,13 @@ page. <br>
 
 On the top right you have the texture list. There you can add, remove and replace
 textures. On the bottom right you have the variable controls. There you can mess
-around with the dynamic variables explained in the "Syntax" section.
+around with the dynamic variables explained in the "Syntax" section.<br>
+
+At the top of the viewport you can see a bar. It has 2 buttons that lead to different
+submenus. The "File" submenu lets you Open, Save and exit the current file you are editing.
+The "Anim" submenu contains an animation manager. You can use the animation manager
+to create, delete, edit and rename animations from the current file. The top bar
+also shows you the current file and selected animation.
 
 ### Syntax
 This is what you'll have to use to animate your parts. Inside the property of a part you can type mathematical
@@ -97,13 +103,13 @@ The custom block has a couple of inputs. Here is what all of them do:
 <li> flip: What direction the animation is flipped in. 1 is normal and -1 is flipped.</li>
 <ul>
 
+### Applying effects
+You can apply any effect that works on a Pen+ square stamp, to an animation. All you have to do it set the effect before rendering
+the animation. Bellow is an example of tinting an animation:<br>
+IMAGE HERE<br>
+
 ### Instanced rendering
 If you want to render the same animation multiple times quickly in different positions on the screen, you can use the same id
 for all of them. This will not load them as different animations and save a lot of memory usage.<br>
 You can use this to make stuff like drop shadows as shown bellow:<br>
-IMAGE HERE<br>
-
-### Applying effects
-You can apply any effect that works on a Pen+ square stamp, to an animation. All you have to do it set the effect before rendering
-the animation. Bellow is an example of tinting an animation:<br>
 IMAGE HERE<br>
