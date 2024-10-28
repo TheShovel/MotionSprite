@@ -16,7 +16,7 @@ This will be covered in sections:
        <li>Applying effects</li>
   </ul>
 </ul>
-Remember that you will need basic knowledge of Pen+, PenguinMod/TurboWarp and
+Remember that you will need basic knowledge of Pen+, PenguinMod and
 writinng a pen based renderer.
 
 ## -Editor-
