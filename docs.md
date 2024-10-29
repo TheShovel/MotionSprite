@@ -24,6 +24,8 @@ writinng a pen based renderer.<br>
 Or use this extension ``https://theshovel.rocks/MotionSprite/loader/loader.js``<br>
 Load it unsandboxed!
 
+### [The editor can be used from here](https://theshovel.rocks/MotionSprite) if you don't want to host your own
+
 ## -Editor-
 ### Basics
 The editor is made out of a viewport, 4 pannels and a bar.<br>
