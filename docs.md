@@ -17,7 +17,12 @@ This will be covered in sections:
   </ul>
 </ul>
 Remember that you will need basic knowledge of Pen+, PenguinMod and
-writinng a pen based renderer.
+writinng a pen based renderer.<br>
+
+### [Download the renderer](https://github.com/TheShovel/MotionSprite/raw/refs/heads/main/renderer/basic.pms)
+
+Or use this extension ``https://theshovel.rocks/MotionSprite/loader/loader.js``<br>
+Load it unsandboxed!
 
 ## -Editor-
 ### Basics
