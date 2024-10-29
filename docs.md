@@ -80,7 +80,11 @@ https://github.com/user-attachments/assets/9c9586b3-8fa6-44bf-ba49-048910a13763
 
 
 You can clamp a value between 2 numbers by doing ``min(max(100, 25), 50)`` where 25 is the minimum value, and 50 is the
-maximum value, while 100 is the value beling clamped. You get the idea. It's just the JavaScript Math object.
+maximum value, while 100 is the value beling clamped. You get the idea. It's just the JavaScript Math object.<br>
+
+Here is an example of how the velocity variables work.<br>
+
+https://github.com/user-attachments/assets/8642f6fd-6c09-4089-a151-c4428b68ffe1
 
 ## -Renderer-
 ### Implementation
