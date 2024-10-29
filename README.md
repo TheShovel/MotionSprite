@@ -1,5 +1,5 @@
 [![svgviewer-png-output](https://github.com/user-attachments/assets/8d8e02a0-13c7-4c13-8bbf-91ffd87b02dc)](https://penguinmod.com)
-[![svgviewer-png-output (3)](https://github.com/user-attachments/assets/cb7f5d0f-53c3-460c-af48-74c11e8b758c)]([https://penguinmod.com](https://pen-group.github.io/))
+[![svgviewer-png-output (3)](https://github.com/user-attachments/assets/cb7f5d0f-53c3-460c-af48-74c11e8b758c)](https://pen-group.github.io/)
 [![svgviewer-png-output (1)](https://github.com/user-attachments/assets/68934725-8189-47ba-99ef-44ec0c51ee6b)](https://theshovel.rocks)
 
 
