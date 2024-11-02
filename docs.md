@@ -65,7 +65,7 @@ There are special variables that you can use in your animations to make them mor
 <ul>
 
 The way you set them is by setting a runtime variable with the variable name followed by the id, like this
-``ai1`` or ``xvel`` and so on. (Remember that they all should be lowercase)
+``ai1`` or ``xvel1`` and so on. (Remember that they all should be lowercase)
 
 ##### Examples
 Making something move back and forth ``cos(time*5)*25`` where 5 is the speed and 25 is the distance. This is between
