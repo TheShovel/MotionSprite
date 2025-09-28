@@ -30,3 +30,5 @@ into your own project:
 
 ![approved](https://github.com/user-attachments/assets/836294b6-c3b5-4f12-a245-7dd0004bba44)
 
+2025 update awards
+<img width="559" height="104" alt="image" src="https://github.com/user-attachments/assets/286b2f7e-27e8-46a9-85a9-506f83a9c77e" />
