@@ -22,10 +22,6 @@ If you want to get started with it you can read the documentation on how to use 
 into your own project: 
 ## [Click me to learn how to use this!](https://github.com/TheShovel/MotionSprite/blob/main/docs.md)
 
-Need some some community help? Want to show off your creation? Join the Discord server!
-
-----> [![svgviewer-png-output (4)](https://github.com/user-attachments/assets/0b3fcf4b-a0cb-4096-acdd-cf2410b4e02f)](https://discord.com/invite/cEm3J6Ng24) <----
-
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ✨Awards won (real)✨
@@ -34,3 +30,5 @@ Need some some community help? Want to show off your creation? Join the Discord 
 
 ![approved](https://github.com/user-attachments/assets/836294b6-c3b5-4f12-a245-7dd0004bba44)
 
+2025 update awards
+<img width="559" height="104" alt="image" src="https://github.com/user-attachments/assets/286b2f7e-27e8-46a9-85a9-506f83a9c77e" />
