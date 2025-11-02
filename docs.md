@@ -99,12 +99,22 @@ You can load the extension into your project from this link ``https://extensions
 
 ### Loading animation files
 Theres 2 ways to load an animation file:<br><br>
-1. You can load it into your project by clicking "Manage animation files" in the block pallette:<br>[IMAGE]<br>
+You can load it into your project by clicking "Manage animation files" in the block pallette:<br><img width="537" height="214" alt="image" src="https://github.com/user-attachments/assets/0c780429-47ac-4408-8120-2a19cd74caa4" />
+<br>
 This will save the animation you loaded into the project file. When you save and re-open your PenguinMod project, your animation files will be there.<br>
 This will only load the animation as a file. To load the file to be usable, you have to put the file block, into the "load file from" block input, like this:
-<br>[VIDEO]<br>
+
+
+https://github.com/user-attachments/assets/f1b8ca62-9fad-4a35-85e5-087233082333
+
+
 <br>
-2. You can load it from a link with the "load file from" block. This won't save the file into your project, but it's useful for asset streaming. It has to be a direct link to the file, like this:<br>[VIDEO]<br>
+You can also load it from a link with the "load file from" block. This won't save the file into your project, but it's useful for asset streaming. It has to be a direct link to the file, like this:
+
+
+https://github.com/user-attachments/assets/977d85f3-b794-421c-80f3-757094c304ea
+
+
 
 ### Rendering
 Once you have loaded an animation, you can render it onto a sprite, with the "render animation" block. The first input is for the animation name that from the file, and the 2nd input is the name that you loaded the file as.<br>
@@ -112,10 +122,12 @@ NOTE: Once you do this, the animation won't update every frame. You have to call
 
 #### Rendering options
 Theres some blocks that let you set options for rendering, depending on your needs.<br><br>
-You can enable or disable anti aliasing, which is a technique used to smooth out jagged edges in the animation. This can be set with this block:<br>[IMAGE]<br>
-<br>
-You can change the resolution the animation renders at. This can be used to increase performance depending on the project. Many low resolution animations will render faster than many high resolution animations, but will look worse. This can be set with this block:<br>[IMAGE]<br>
-
+You can enable or disable anti aliasing, which is a technique used to smooth out jagged edges in the animation. This can be set with this block:
+<img width="1700" height="615" alt="image" src="https://github.com/user-attachments/assets/49aa0e5c-1967-4ee9-b380-5c271f1d7ee2" />
+<img width="1573" height="604" alt="image" src="https://github.com/user-attachments/assets/47dbb82b-3fec-4687-95c8-809c70820b9c" />
+You can change the resolution the animation renders at. This can be used to increase performance depending on the project. Many low resolution animations will render faster than many high resolution animations, but will look worse. This can be set with this block:
+<img width="1619" height="552" alt="image" src="https://github.com/user-attachments/assets/aaf25d86-6dc6-4ca7-9c93-977b8816b0a3" />
+<img width="1648" height="595" alt="image" src="https://github.com/user-attachments/assets/75f0a435-2e0f-482b-9170-d45c9d9269e8" />
 ### Setting properties
 When you render your animation, you will notice that it doesn't move! That's because you have to set the variables used manually. This can be done by using the "set" block. These variables are the ones explained in the [Syntax](https://github.com/TheShovel/MotionSprite/blob/main/docs.md#syntax) section.<br><br>
 For the "Time" variable it's recommended to set a timer that updates every frame. This is not done by default because it gives you control over how the animation plays. You can make it go faster or slower by using your own values.
