@@ -117,5 +117,5 @@ You can enable or disable anti aliasing, which is a technique used to smooth out
 You can change the resolution the animation renders at. This can be used to increase performance depending on the project. Many low resolution animations will render faster than many high resolution animations, but will look worse. This can be set with this block:<br>[IMAGE]<br>
 
 ### Setting properties
-When you render your animation, you will notice that it doesn't move! That's because you have to set the variables used manually. This can be done by using the "set" block. These variables are the ones explained in the "Syntax" section.<br><br>
+When you render your animation, you will notice that it doesn't move! That's because you have to set the variables used manually. This can be done by using the "set" block. These variables are the ones explained in the [Syntax](https://github.com/TheShovel/MotionSprite/blob/main/docs.md#syntax) section.<br><br>
 For the "Time" variable it's recommended to set a timer that updates every frame. This is not done by default because it gives you control over how the animation plays. You can make it go faster or slower by using your own values.
