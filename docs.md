@@ -2,17 +2,17 @@
 This covers everything you need to know to make and use MotionSprite animations in your projects.<br>
 This will be covered in sections:
 <ul>
-    <li>[About](https://github.com/TheShovel/MotionSprite/blob/main/docs.md#-about-)</li>
+    <li[About</li>
     <ul>
          <li>Uses</li>
          <li>Limitations</li>
     </ul>
-  <li>[Editor](https://github.com/TheShovel/MotionSprite/blob/main/docs.md#-editor-)</li>
+  <li>Editor</li>
   <ul>
        <li>Basics</li>
        <li>Syntax</li>
   </ul>
-  <li>[Extension](https://github.com/TheShovel/MotionSprite/blob/main/docs.md#-extension-)</li>
+  <li>Extension</li>
   <ul>
        <li>Loading animation files</li>
        <li>Rendering</li>
