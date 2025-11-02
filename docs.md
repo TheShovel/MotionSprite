@@ -2,36 +2,39 @@
 This covers everything you need to know to make and use MotionSprite animations in your projects.<br>
 This will be covered in sections:
 <ul>
+    <li>About</li>
+    <ul>
+         <li>Uses</li>
+         <li>Limitations</li>
+    </ul>
   <li>Editor</li>
   <ul>
        <li>Basics</li>
        <li>Syntax</li>
   </ul>
-  <li>Renderer</li>
+  <li>Extension</li>
   <ul>
-       <li>Implementation</li>
-       <li>Importing animation files</li>
-       <li>Properties</li>
-       <li>Instanced rendering</li>
-       <li>Applying effects</li>
+       <li>Loading animation files</li>
+       <li>Rendering</li>
+       <li>Setting properties</li>
   </ul>
 </ul>
-Remember that you will need basic knowledge of Pen+, PenguinMod and
-writinng a pen based renderer.<br>
 
-### [Download the renderer](https://github.com/TheShovel/MotionSprite/raw/refs/heads/main/renderer/basic.pms)
+## -About-
+MotionSprite is a math-based animation tool. It is designed for efficiency over ease of use. It does not use keyframes, instead, it uses mathematical functions to set properties, which turn into animated graphics!
 
-Or use this extension ``https://theshovel.rocks/MotionSprite/loader/loader.js``<br>
-Load it unsandboxed!
+### Uses
+Even though you can theoretically use this for any kind of animation in your games, it is mostly designed for motion graphics, environment visuals and effects. Animating characters like a player for a platformer IS POSSIBLE, but not easy to do.
 
-### [The editor can be used from here](https://theshovel.rocks/MotionSprite) if you don't want to host your own
+### Limitations
+Because of no keyframes, you are limited to how much patience you have to figure out math functions. Along that, the extension can't render more than around 50 animated sprites every frame at a resonable frame rate, due to how updating sprite skins works in PenguinMod. You can get around this by using pen and doing instanced rendering, where you only render an animation once per frame and then stamp it in a bunch of places.
 
 ## -Editor-
+The editor can be opened from the "Animation editor" button in the block palette, or by going to [https://theshovel.rocks/MotionSprite/](https://theshovel.rocks/MotionSprite/)
 ### Basics
 The editor is made out of a viewport, 4 pannels and a bar.<br>
 
-On the top left you have the part list. There you can add, remove, re-order and assign textures to parts of your
-animation. On the bottom left you have the property inspector. Once you click a
+On the top left you have the part list. There you can add, remove, re-order and assign textures to parts of your animation. On the bottom left you have the property inspector. Once you click a
 part's name, you can view and edit its properties. Click on the pen icon on any of
 them to start editing them. We will talk more about this in the "Syntax" section of this
 page. <br> ![Screenshot_20241028_175710](https://github.com/user-attachments/assets/c7258590-3797-4704-81f7-7cb9f9d950f9)
@@ -51,21 +54,30 @@ also shows you the current file and selected animation.![Screenshot_20241028_175
 
 ### Syntax
 This is what you'll have to use to animate your parts. Inside the property of a part you can type mathematical
-functions. These will result into a value that the property will take every frame the animation is rendered.<br>
-Everything under the JavaScript Math function will work. Here is a list of all the functions you can use:<br>
-abs, acos, acosh, asin, asinh, atan, atanh, atan2, ceil, cbrt, expm1, clz32, cos, cosh, exp, floor, fround, hypot, imul, log, log1p, log2, log10, max, min, pow, random, round, sign, sin, sinh, sqrt, tan, tanh, trunc
+functions. These will result into a value that the property will take every frame the animation is rendered.<br> <br>Here is a list of all the functions you can use:
+<ul>
+<li> cos(a): Returns the cosine of a.</li>
+<li> sin(a): Returns the sine of a.</li>
+<li> abs(a): Returns the absolute value of a.</li>
+<li> sqrt(a): Returns the square root of a.</li>
+<li> pow(a, b): Returns a to the power of b.</li>
+<li> max(a, b, ...): Returns the largest of zero or more numbers.</li>
+<li> min(a, b, ...): Returns the smallest of zero or more numbers.</li>
+<li> clamp(value, min, max): Clamps a value between a minimum and maximum value. Returns value if it is between min and max, returns min if value is less than min, and max if value is greater than max.</li>
+<li> round(a): Returns the value of the number a rounded to the nearest integer.</li>
+<li> floor(a): Returns the largest integer less than or equal to a.</li>
+<li> ceil(a): Returns the smallest integer greater than or equal to a.</li>
+<li> mod(a, b): Returns a % b, but handles negative numbers correctly.</li>
+<ul>
 
 ##### Variables
-There are special variables that you can use in your animations to make them more dynamic.
+There are special variables that you can use in your animations to make them more dynamic:
 <ul>
-<li> time: It gets the current timer of the animation. It starts when the animation is loaded.</li>
+<li> time: It gets the current timer of the animation. Usually used with a timer that updates every frame as an input.</li>
 <li> ai: Short for "animation intensity", is a value that can be used to change the intensity of your current animation.</li>
 <li> xvel: Can be used to change the animation based on movement.</li>
 <li> yvel: Can be used to change the animation based on movement.</li>
 <ul>
-
-The way you set them is by setting a runtime variable with the variable name followed by the id, like this
-``ai1`` or ``xvel1`` and so on. (Remember that they all should be lowercase)
 
 ##### Examples
 Making something move back and forth ``cos(time*5)*25`` where 5 is the speed and 25 is the distance. This is between
@@ -78,68 +90,32 @@ If you want it between 0 and 25 you can do ``abs(cos(time*5)*25)``.<br>
 
 https://github.com/user-attachments/assets/9c9586b3-8fa6-44bf-ba49-048910a13763
 
-
-You can clamp a value between 2 numbers by doing ``min(max(100, 25), 50)`` where 25 is the minimum value, and 50 is the
-maximum value, while 100 is the value beling clamped. You get the idea. It's just the JavaScript Math object.<br>
-
 Here is an example of how the velocity variables work.<br>
 
 https://github.com/user-attachments/assets/8642f6fd-6c09-4089-a151-c4428b68ffe1
 
-## -Renderer-
-### Implementation
-You can load everything required using this extension: ``https://theshovel.rocks/MotionSprite/loader/loader.js``<br>
-LOAD IT UNSANDBOXED. Check the box when loading the URL!!!<br>
+## -Extension-
+You can load the extension into your project from this link ``https://extensions.penguinmod.com/extensions/TheShovel/qoan-renderer.js``, or you can start a fresh project with the extension loaded by [clicking here](https://studio.penguinmod.com/editor.html?extension=https://extensions.penguinmod.com/extensions/TheShovel/qoan-renderer.js).
 
-Keep in mind that this was made for Pen projects. Your project must already be a Pen based project for this to work!<br>
-You can drag the custom block into any other sprite you are using. (you will probably want to move it into the sprite
-that renders everything in your game)<br>
-After you do that, you can just place the custom block anywhere in your code! It works just like stamping a costume, but
-instead you are stamping a whole animated element!
+### Loading animation files
+Theres 2 ways to load an animation file:<br><br>
+1. You can load it into your project by clicking "Manage animation files" in the block pallette:<br>[IMAGE]<br>
+This will save the animation you loaded into the project file. When you save and re-open your PenguinMod project, your animation files will be there.<br>
+This will only load the animation as a file. To load the file to be usable, you have to put the file block, into the "load file from" block input, like this:
+<br>[VIDEO]<br>
+<br>
+2. You can load it from a link with the "load file from" block. This won't save the file into your project, but it's useful for asset streaming. It has to be a direct link to the file, like this:<br>[VIDEO]<br>
 
-### Importing animation files
-To import an animation, you must first decide how you will store your animations.<br>
+### Rendering
+Once you have loaded an animation, you can render it onto a sprite, with the "render animation" block. The first input is for the animation name that from the file, and the 2nd input is the name that you loaded the file as.<br>
+NOTE: Once you do this, the animation won't update every frame. You have to call the "render animation" block every time you want to update the sprite's animation.
 
-If you want to store them in your project, you will have to load the file into a Scratch variable. You can do this by copy
-pasting the contents of your animation file into the value of a variable (via the variables tab) or you can do something with
-the files extension as shown bellow:<br>
-![Screenshot_20241028_180130](https://github.com/user-attachments/assets/d6f65402-0eb4-499f-8757-2c10c8a3c3d8)
+#### Rendering options
+Theres some blocks that let you set options for rendering, depending on your needs.<br><br>
+You can enable or disable anti aliasing, which is a technique used to smooth out jagged edges in the animation. This can be set with this block:<br>[IMAGE]<br>
+<br>
+You can change the resolution the animation renders at. This can be used to increase performance depending on the project. Many low resolution animations will render faster than many high resolution animations, but will look worse. This can be set with this block:<br>[IMAGE]<br>
 
-
-But... if you want to load it externally (from a server or local file in Electron build) you will have to fetch it. There
-is an example bellow:<br>
-![Screenshot_20241028_180240](https://github.com/user-attachments/assets/132ac550-fdd3-43e1-95d0-4294a0c6edda)
-
-
-##### WARNING
-Keep in mind that that no matter how you store your animation, it must then be set into a runtime variable. You will use the name
-of that runtime variable in the animation's file input (mentioned in the properties section), like in the examples above.<br>
-This is done for performance reasons. If you would input the animation directly into the input, that data would have to be
-parsed to the block every frame.
-
-### Properties
-The custom block has a couple of inputs. Here is what all of them do:
-<ul>
-<li> x: X position where the animation will be rendered.</li>
-<li> y: Y position where the animation will be rendered.</li>
-<li> direction: The rotation that the animation will be rendered in.</li>
-<li> file: The name of the runtime variable that stores the animation. (look at the "Importing animation files" section)</li>
-<li> anim: The name of the animation from the file that will be rendered.</li>
-<li> size: Size that the animation will be rendered in.</li>
-<li> id: Unqiue number that you set to an animated component.</li>
-<li> flip: What direction the animation is flipped in. 1 is normal and -1 is flipped.</li>
-<ul>
-
-### Applying effects
-You can apply any effect that works on a Pen+ square stamp, to an animation. All you have to do it set the effect before rendering
-the animation. Bellow is an example of tinting an animation:<br>
-![Screenshot_20241028_180547](https://github.com/user-attachments/assets/18a73065-0aeb-43a0-bb5f-456675bf3caa)
-![Screenshot_20241028_180609](https://github.com/user-attachments/assets/1152c9bf-48f1-4de8-a9ea-a91dec772e24)
-
-
-### Instanced rendering
-If you want to render the same animation multiple times quickly in different positions on the screen, you can use the same id
-for all of them. This will not load them as different animations and save a lot of memory usage.<br>
-You can use this to make stuff like drop shadows as shown bellow:<br>
-![Screenshot_20241028_180438](https://github.com/user-attachments/assets/703eeb59-17bc-4280-b32b-fb0e5281e866)
-![Screenshot_20241028_180501](https://github.com/user-attachments/assets/d08df41a-aa9f-4138-9f09-26803571f053)
+### Setting properties
+When you render your animation, you will notice that it doesn't move! That's because you have to set the variables used manually. This can be done by using the "set" block. These variables are the ones explained in the "Syntax" section.<br><br>
+For the "Time" variable it's recommended to set a timer that updates every frame. This is not done by default because it gives you control over how the animation plays. You can make it go faster or slower by using your own values.
